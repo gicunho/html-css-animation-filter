@@ -1,0 +1,157 @@
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    transition: background-color 4s;
+}
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: all 4s;
+}
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: all 4s;
+}
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation-name: scomparsa;
+    animation-duration: 4s;
+}
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+}
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+}
+
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+}
+.ex-10-icon {
+    font-size: 60px;
+}
+.ex-11-icon {
+    font-size: 60px;
+}
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+/* Risoluzione esercizi  */
+.ex-1-square:hover{
+    background-color: red;
+}
+
+.ex-2-square:active {
+    width: 100%;
+}
+
+.ex-3-square:hover{
+    border-radius: 50%;
+}
+
+@keyframes scomparsa {
+    0%   {opacity: 1;}
+  25%  {opacity: 0.75;}
+  50%  {opacity: 0.25;}
+  100% {opacity: 0;}
+}
+
+.ex-5-square:hover{
+    transform: scale(1.3);
+}
+
+.ex-5-square:active {
+    transform: scale(0.8);
+}
+
+.ex-6-img:hover{
+    filter: grayscale(1);
+}
+
+.ex-7-img{
+    transition: all 2s;
+}
+
+.ex-7-img:hover{
+    filter:blur(2px) sepia(1);
+}
+
+.ex-8-img:hover{
+    filter: brightness(1) hue-rotate(180deg);
+    border-radius: 10px;
+}
+
+.ex-9-img:hover{
+    filter: invert(1) saturate(1);
+    border-radius: 10px;
+    transform: scale(1.5)
+}
+
+.ex-10-icon{
+    animation-name: caricamento;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes caricamento {
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
+/* .ex-11-icon{
+    transition: 4s;
+} */
+
+.ex-11-icon:hover {
+    animation-name: rotazione;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotazione {
+    0%   {transform: rotate(0deg);}
+    /* 25%  {opacity: 0.75;} */
+    75%  {transform: rotate(270deg);}
+    100% {transform: rotate(0deg);}
+}
